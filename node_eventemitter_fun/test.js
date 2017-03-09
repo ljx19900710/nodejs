@@ -9,5 +9,7 @@ eventEmitter.on('fun1',function(){
 eventEmitter.on('fun3',function(){
 	console.log('haha3');
 });
-var msg = eventEmitter.listeners('fun1');
+
+eventEmitter.emit('fun1');
+var msg = events.EventEmitter.listenerCount(eventEmitter,'fun1');
 console.log(msg);
